@@ -6,7 +6,7 @@
 //
 
 import UIKit
-/// ViewController
+/// Отрисовка алерта
 class ViewController: UIViewController {
     let textLabel: UILabel = {
        var label = UILabel()
@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         button.backgroundColor = .orange
         return button
     }()
+    var model = WordProcessing()
     var text = String()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,4 +36,16 @@ class ViewController: UIViewController {
     @objc func startGame() {
         helloGame()
     }
+    func helloGame() {
+        let alertController = UIAlertController(title: "", message: "Введите слово", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            guard let text = alertController.textFields?.first?.text else { return }
+            self.textLabel.text = self.model.decodeString(text: text)
+        }
+        
+        alertController.addAction(action)
+        alertController.addTextField()
+        self.present(alertController, animated: true)
+    }
+   
 }
