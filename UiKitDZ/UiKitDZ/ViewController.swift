@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-final class ViewController: UIViewController {
+/// ViewController
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
