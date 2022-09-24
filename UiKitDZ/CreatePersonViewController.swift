@@ -102,8 +102,8 @@ class CreatePersonViewController: UIViewController {
     
     let datePicker = UIDatePicker()
     let ages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-    let pickerView = UIPickerView()
-    let pickerGender = UIPickerView()
+    let agePicker = UIPickerView()
+    let genderPicker = UIPickerView()
     let genders = ["Мужчина", "Женщина", "Боевой вертолет"]
 
     override func viewDidLoad() {
@@ -126,15 +126,15 @@ class CreatePersonViewController: UIViewController {
         view.addSubview(genderTextField)
         view.addSubview(instagramLabel)
         view.addSubview(instagramTextField)
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        pickerGender.delegate = self
-        pickerGender.dataSource = self
+        agePicker.delegate = self
+        agePicker.dataSource = self
+        genderPicker.delegate = self
+        genderPicker.dataSource = self
         instagramTextField.delegate = self
-        ageTextField.inputView = pickerView
-        genderTextField.inputView = pickerGender
-        pickerView.tag = 1
-        pickerGender.tag = 2
+        ageTextField.inputView = agePicker
+        genderTextField.inputView = genderPicker
+        agePicker.tag = 1
+        genderPicker.tag = 2
         rightBarButtonAction()
         leftBarButtonAction()
     }
