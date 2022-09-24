@@ -6,8 +6,8 @@
 //
 
 import UIKit
-/// ViewController
-class ViewController: UIViewController {
+/// Плейлист
+class PlayListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
