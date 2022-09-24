@@ -15,7 +15,7 @@ var window: UIWindow?
         guard let windowScene = (scene as? UIWindowScene) else { return }
            window?.windowScene = windowScene
            window?.makeKeyAndVisible()
-           let viewController = ViewController()
+           let viewController = StartPageViewController()
            let navViewController = UINavigationController(rootViewController: viewController)
            self.window?.rootViewController = navViewController
            

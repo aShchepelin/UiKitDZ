@@ -165,7 +165,6 @@ class CreatePersonViewController: UIViewController {
         datePicker.preferredDatePickerStyle = .wheels
     }
     
-    
     @objc func pushBirthdayListAction() {
         let addPerson = BirthdayListViewController()
         self.navigationController?.pushViewController(addPerson, animated: true)

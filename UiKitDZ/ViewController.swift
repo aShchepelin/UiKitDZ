@@ -7,7 +7,7 @@
 
 import UIKit
 /// Отрисовка стартового экрана с функциональным глазиком
-class ViewController: UIViewController {
+class StartPageViewController: UIViewController {
 
     let birthdayLabel: UILabel = {
         let label = UILabel()

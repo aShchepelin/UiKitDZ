@@ -148,7 +148,7 @@ class BirthdayListViewController: UIViewController {
     }
     
     @objc func pushViewControllerAction() {
-        let vc = ViewController()
+        let vc = StartPageViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
         
