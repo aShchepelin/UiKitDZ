@@ -6,7 +6,7 @@
 //
 
 import UIKit
-/// Экран добавления человека с навигационными кнопками
+/// Экран добавления человека с пикерами и навигационными кнопками
 class CreatePersonViewController: UIViewController {
     
     let personImage: UIButton = {
@@ -103,7 +103,7 @@ class CreatePersonViewController: UIViewController {
     let datePicker = UIDatePicker()
     let ages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
     let pickerView = UIPickerView()
-    let pickerSex = UIPickerView()
+    let pickerGender = UIPickerView()
     let genders = ["Мужчина", "Женщина", "Боевой вертолет"]
 
     override func viewDidLoad() {
@@ -128,13 +128,13 @@ class CreatePersonViewController: UIViewController {
         view.addSubview(instagramTextField)
         pickerView.delegate = self
         pickerView.dataSource = self
-        pickerSex.delegate = self
-        pickerSex.dataSource = self
+        pickerGender.delegate = self
+        pickerGender.dataSource = self
         instagramTextField.delegate = self
         ageTextField.inputView = pickerView
-        genderTextField.inputView = pickerSex
+        genderTextField.inputView = pickerGender
         pickerView.tag = 1
-        pickerSex.tag = 2
+        pickerGender.tag = 2
         rightBarButtonAction()
         leftBarButtonAction()
     }
@@ -154,11 +154,6 @@ class CreatePersonViewController: UIViewController {
                                                            action: #selector(pushBirthdayListAction))
     }
     
-    @objc func pushBirthdayListAction() {
-        let addPerson = BirthdayListViewController()
-        self.navigationController?.pushViewController(addPerson, animated: true)
-    }
-    
     func createDatePicker() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -168,6 +163,12 @@ class CreatePersonViewController: UIViewController {
         dateTextField.inputView = datePicker
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
+    }
+    
+    
+    @objc func pushBirthdayListAction() {
+        let addPerson = BirthdayListViewController()
+        self.navigationController?.pushViewController(addPerson, animated: true)
     }
     
     @objc func donePressedAction() {
@@ -230,9 +231,7 @@ extension CreatePersonViewController: UITextFieldDelegate {
         }
 
         alert.addAction(alertCheckButton)
-        alert.addTextField { field in
-            field.placeholder = ""
-        }
+        alert.addTextField()
         
         alert.addAction(UIAlertAction(title: "Отмена", style: .cancel))
         

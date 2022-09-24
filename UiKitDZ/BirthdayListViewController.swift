@@ -110,6 +110,24 @@ class BirthdayListViewController: UIViewController {
         setupUI()
     }
     
+    func setupUI() {
+        view.backgroundColor = .white
+        view.addSubview(jeremyLabel)
+        view.addSubview(jeremyButton)
+        view.addSubview(jeremyInfo)
+        view.addSubview(jeremyBrthd)
+        view.addSubview(mariaLabel)
+        view.addSubview(mariaInfo)
+        view.addSubview(mariaBrthd)
+        view.addSubview(mariaButton)
+        view.addSubview(jonyInfo)
+        view.addSubview(jonyBrthd)
+        view.addSubview(jonyLabel)
+        view.addSubview(jonyButton)
+        rightBarButtonAction()
+        leftBarButtonAction()
+    }
+    
     func rightBarButtonAction() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
@@ -133,23 +151,5 @@ class BirthdayListViewController: UIViewController {
         let vc = ViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-        
-        func setupUI() {
-            view.backgroundColor = .white
-            view.addSubview(jeremyLabel)
-            view.addSubview(jeremyButton)
-            view.addSubview(jeremyInfo)
-            view.addSubview(jeremyBrthd)
-            view.addSubview(mariaLabel)
-            view.addSubview(mariaInfo)
-            view.addSubview(mariaBrthd)
-            view.addSubview(mariaButton)
-            view.addSubview(jonyInfo)
-            view.addSubview(jonyBrthd)
-            view.addSubview(jonyLabel)
-            view.addSubview(jonyButton)
-            rightBarButtonAction()
-            leftBarButtonAction()
-        }
         
     }
