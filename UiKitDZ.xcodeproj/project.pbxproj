@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F7F5C9928DE41A100A305D1 /* BirthdayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F5C9828DE41A100A305D1 /* BirthdayListViewController.swift */; };
+		6F7F5C9B28DE732F00A305D1 /* CreatePersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7F5C9A28DE732F00A305D1 /* CreatePersonViewController.swift */; };
 		6FE602E128DB66D0006E0264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE602E028DB66D0006E0264 /* AppDelegate.swift */; };
 		6FE602E328DB66D0006E0264 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE602E228DB66D0006E0264 /* SceneDelegate.swift */; };
 		6FE602E528DB66D0006E0264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE602E428DB66D0006E0264 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F7F5C9828DE41A100A305D1 /* BirthdayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListViewController.swift; sourceTree = "<group>"; };
+		6F7F5C9A28DE732F00A305D1 /* CreatePersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonViewController.swift; sourceTree = "<group>"; };
 		6FE602DD28DB66D0006E0264 /* UiKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE602E028DB66D0006E0264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE602E228DB66D0006E0264 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				6FE602E028DB66D0006E0264 /* AppDelegate.swift */,
 				6FE602E228DB66D0006E0264 /* SceneDelegate.swift */,
 				6FE602E428DB66D0006E0264 /* ViewController.swift */,
+				6F7F5C9828DE41A100A305D1 /* BirthdayListViewController.swift */,
+				6F7F5C9A28DE732F00A305D1 /* CreatePersonViewController.swift */,
 				6FE602E628DB66D0006E0264 /* Main.storyboard */,
 				6FE602E928DB66D1006E0264 /* Assets.xcassets */,
 				6FE602EB28DB66D1006E0264 /* LaunchScreen.storyboard */,
@@ -161,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7F5C9B28DE732F00A305D1 /* CreatePersonViewController.swift in Sources */,
+				6F7F5C9928DE41A100A305D1 /* BirthdayListViewController.swift in Sources */,
 				6FE602E528DB66D0006E0264 /* ViewController.swift in Sources */,
 				6FE602E128DB66D0006E0264 /* AppDelegate.swift in Sources */,
 				6FE602E328DB66D0006E0264 /* SceneDelegate.swift in Sources */,
