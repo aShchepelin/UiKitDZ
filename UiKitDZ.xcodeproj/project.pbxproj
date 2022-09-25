@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6F46797628DF59BA005102BC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F46797528DF59BA005102BC /* PlayerViewController.swift */; };
+		6F46797928DF9F29005102BC /* Duna - privet s bolshogo boduna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F46797728DF9F29005102BC /* Duna - privet s bolshogo boduna.mp3 */; };
+		6F46797A28DF9F29005102BC /* Aleksandr Laertskij  - Deti horonyat konya.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F46797828DF9F29005102BC /* Aleksandr Laertskij  - Deti horonyat konya.mp3 */; };
+		6F46797C28E05558005102BC /* SongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F46797B28E05558005102BC /* SongVC.swift */; };
 		6FE602E128DB66D0006E0264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE602E028DB66D0006E0264 /* AppDelegate.swift */; };
 		6FE602E328DB66D0006E0264 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE602E228DB66D0006E0264 /* SceneDelegate.swift */; };
 		6FE602E528DB66D0006E0264 /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE602E428DB66D0006E0264 /* PlayListViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		6F46797528DF59BA005102BC /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		6F46797728DF9F29005102BC /* Duna - privet s bolshogo boduna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Duna - privet s bolshogo boduna.mp3"; path = "../../../../Duna - privet s bolshogo boduna.mp3"; sourceTree = "<group>"; };
+		6F46797828DF9F29005102BC /* Aleksandr Laertskij  - Deti horonyat konya.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Aleksandr Laertskij  - Deti horonyat konya.mp3"; path = "../../../../Aleksandr Laertskij  - Deti horonyat konya.mp3"; sourceTree = "<group>"; };
+		6F46797B28E05558005102BC /* SongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongVC.swift; sourceTree = "<group>"; };
 		6FE602DD28DB66D0006E0264 /* UiKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE602E028DB66D0006E0264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE602E228DB66D0006E0264 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +68,10 @@
 				6FE602E228DB66D0006E0264 /* SceneDelegate.swift */,
 				6FE602E428DB66D0006E0264 /* PlayListViewController.swift */,
 				6F46797528DF59BA005102BC /* PlayerViewController.swift */,
+				6F46797B28E05558005102BC /* SongVC.swift */,
 				6FE602E628DB66D0006E0264 /* Main.storyboard */,
+				6F46797828DF9F29005102BC /* Aleksandr Laertskij  - Deti horonyat konya.mp3 */,
+				6F46797728DF9F29005102BC /* Duna - privet s bolshogo boduna.mp3 */,
 				6FE602E928DB66D1006E0264 /* Assets.xcassets */,
 				6FE602EB28DB66D1006E0264 /* LaunchScreen.storyboard */,
 				6FE602EE28DB66D1006E0264 /* Info.plist */,
@@ -129,7 +138,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F46797A28DF9F29005102BC /* Aleksandr Laertskij  - Deti horonyat konya.mp3 in Resources */,
 				6FE602ED28DB66D1006E0264 /* LaunchScreen.storyboard in Resources */,
+				6F46797928DF9F29005102BC /* Duna - privet s bolshogo boduna.mp3 in Resources */,
 				6FE602EA28DB66D1006E0264 /* Assets.xcassets in Resources */,
 				6FE602E828DB66D0006E0264 /* Main.storyboard in Resources */,
 			);
@@ -168,6 +179,7 @@
 				6F46797628DF59BA005102BC /* PlayerViewController.swift in Sources */,
 				6FE602E128DB66D0006E0264 /* AppDelegate.swift in Sources */,
 				6FE602E328DB66D0006E0264 /* SceneDelegate.swift in Sources */,
+				6F46797C28E05558005102BC /* SongVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
