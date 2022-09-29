@@ -91,7 +91,7 @@ class IngridientsViewController: UIViewController {
         button.backgroundColor = .systemOrange
         button.layer.cornerRadius = 15
         button.frame = CGRect(x: 70, y: 700, width: 250, height: 50)
-        button.addTarget(self, action: #selector(pushCheckVC), for: .touchUpInside)
+        button.addTarget(self, action: #selector(presentCheckVC), for: .touchUpInside)
         return button
     }()
     
@@ -165,7 +165,7 @@ class IngridientsViewController: UIViewController {
         present(pizzaCompasitionViewController, animated: true)
     }
     
-    @objc func pushCheckVC() {
+    @objc func presentCheckVC() {
         let checkViewController = CheckViewController()
         let navigationControllerTwo = UINavigationController(rootViewController: checkViewController)
         checkViewController.pizzaLabel.text = pizza
