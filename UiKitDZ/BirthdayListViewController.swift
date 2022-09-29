@@ -33,7 +33,7 @@ class BirthdayListViewController: UIViewController {
         return label
     }()
     
-    let jeremyBrthd: UILabel = {
+    let jeremyBrthdLabel: UILabel = {
         let label = UILabel()
         label.text = "18 дней"
         label.textColor = .systemGray
@@ -57,7 +57,7 @@ class BirthdayListViewController: UIViewController {
         return button
     }()
     
-    let mariaInfo: UILabel = {
+    let mariaInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "30 марта, в четверг исполнится 20 лет"
         label.textColor = .systemGray
@@ -65,7 +65,7 @@ class BirthdayListViewController: UIViewController {
         return label
     }()
     
-    let mariaBrthd: UILabel = {
+    let mariaBrthdLabel: UILabel = {
         let label = UILabel()
         label.text = "28 дней"
         label.textColor = .systemGray
@@ -89,7 +89,7 @@ class BirthdayListViewController: UIViewController {
         return button
     }()
     
-    let jonyInfo: UILabel = {
+    let jonyInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "30 марта, в четверг исполнится 20 лет"
         label.textColor = .systemGray
@@ -97,7 +97,7 @@ class BirthdayListViewController: UIViewController {
         return label
     }()
     
-    let jonyBrthd: UILabel = {
+    let jonyBrthdLabel: UILabel = {
         let label = UILabel()
         label.text = "28 дней"
         label.textColor = .systemGray
@@ -115,13 +115,13 @@ class BirthdayListViewController: UIViewController {
         view.addSubview(jeremyLabel)
         view.addSubview(jeremyButton)
         view.addSubview(jeremyInfo)
-        view.addSubview(jeremyBrthd)
+        view.addSubview(jeremyBrthdLabel)
         view.addSubview(mariaLabel)
-        view.addSubview(mariaInfo)
-        view.addSubview(mariaBrthd)
+        view.addSubview(mariaInfoLabel)
+        view.addSubview(mariaBrthdLabel)
         view.addSubview(mariaButton)
-        view.addSubview(jonyInfo)
-        view.addSubview(jonyBrthd)
+        view.addSubview(jonyInfoLabel)
+        view.addSubview(jonyBrthdLabel)
         view.addSubview(jonyLabel)
         view.addSubview(jonyButton)
         rightBarButtonAction()
@@ -144,12 +144,12 @@ class BirthdayListViewController: UIViewController {
     
     @objc func pushAddPersonAction() {
         let addPerson = CreatePersonViewController()
-        self.navigationController?.pushViewController(addPerson, animated: true)
+        navigationController?.pushViewController(addPerson, animated: true)
     }
     
     @objc func pushViewControllerAction() {
         let vc = StartPageViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
         
     }
