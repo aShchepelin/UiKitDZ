@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "169-1694215_free-png-pepperoni-pizza-png-images-transparent-pepperoni.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {
