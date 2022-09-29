@@ -5,7 +5,6 @@
 //  Created by Александр Андреевич Щепелин on 27.09.2022.
 //
 
-import Foundation
 import UIKit
 /// Вызов UIActivity через кнопку с возможностью зашерить или распечатать картинку, и такой же функционал на пикере при вызове третьего элемента
 class ShareViewController: UIViewController {
@@ -28,18 +27,24 @@ class ShareViewController: UIViewController {
         pickerField.inputView = countriesPicker
     }
     
-    @IBAction func shareButton(_ sender: Any) {
+    @IBAction func shareButtonAction(_ sender: Any) {
         presentShareSheetAction()
     }
     
     @objc func presentShareSheetAction() {
         guard let image = UIImage(systemName: "cloud.fill"),
-              let url = URL(string: "https://www.facebook.com") else { return }
+              let url = URL(string: "https://www.facebook.com")
+        else {
+            
+            return
+            
+        }
         let shareSheetVC = UIActivityViewController(activityItems: [image, url], applicationActivities: nil)
         present(shareSheetVC, animated: true)
     }
 }
 
+/// UIPickerViewDelegate, UIPickerViewDataSource
 extension ShareViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
