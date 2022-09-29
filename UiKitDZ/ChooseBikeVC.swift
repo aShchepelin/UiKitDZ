@@ -18,7 +18,7 @@ class ChooseBikeViewController: UIViewController {
         return textField
     }()
     
-    let discountValue: UILabel = {
+    let discountValueLabel: UILabel = {
        let label = UILabel()
         label.frame = CGRect(x: 330, y: 110, width: 50, height: 30)
         return label
@@ -80,14 +80,14 @@ class ChooseBikeViewController: UIViewController {
         color.maximumValue = 5
         color.value = 3
         view.addSubview(color)
-        view.addSubview(discountValue)
+        view.addSubview(discountValueLabel)
         color.addTarget(self, action: #selector(colorValue(sender:)), for: .valueChanged)
         view.addSubview(discountLabel)
         imageView.contentMode = .scaleAspectFill
     }
     
     @objc func colorValue(sender: UISlider) {
-        discountValue.text = "\(Int(color.value))"
+        discountValueLabel.text = "\(Int(color.value))"
     }
     
     @objc func selectedBikeAction(target: UISegmentedControl) {

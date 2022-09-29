@@ -27,7 +27,7 @@ class BasketViewController: UIViewController {
         return button
     }()
     
-    let bikeType: UILabel = {
+    let bikeLabel: UILabel = {
        let label = UILabel()
         label.frame = CGRect(x: 200, y: 500, width: 100, height: 30)
        return label
@@ -40,7 +40,7 @@ class BasketViewController: UIViewController {
         return label
     }()
     
-    let bikeMark: UILabel = {
+    let bikeMarkInfoLabel: UILabel = {
         let label = UILabel()
         label.frame = CGRect(x: 200, y: 525, width: 100, height: 30)
         return label
@@ -53,7 +53,7 @@ class BasketViewController: UIViewController {
         return label
     }()
     
-    let bikeCost: UILabel = {
+    let costLabel: UILabel = {
         let label = UILabel()
         label.frame = CGRect(x: 200, y: 550, width: 200, height: 30)
         return label
@@ -75,31 +75,35 @@ class BasketViewController: UIViewController {
     
     func setupUI() {
         view.backgroundColor = .white
+        view.addSubview(logo)
+        view.addSubview(buyingButton)
+        view.addSubview(bikeLabel)
+        view.addSubview(bikeMarkInfoLabel)
+        view.addSubview(costLabel)
+        view.addSubview(bikeCostLabel)
+        view.addSubview(bikeMarkLabel)
+        view.addSubview(bikeTypeLabel)
+        infoBicycle()
+        }
+    
+    func infoBicycle() {
         switch bikeInfo {
         case "Road race bike":
-            bikeType.text = "Road race bike"
-            bikeMark.text = "Marin"
-            bikeCost.text = "200000 rub"
+            bikeLabel.text = "Road race bike"
+            bikeMarkInfoLabel.text = "Marin"
+            costLabel.text = "200000 rub"
         case "City bike":
-            bikeType.text = "City bike"
-            bikeMark.text = "Brooklyn"
-            bikeCost.text = "70000 rub"
+            bikeLabel.text = "City bike"
+            bikeMarkInfoLabel.text = "Brooklyn"
+            costLabel.text = "70000 rub"
         case "Mountain bike":
-            bikeType.text = "Mountain bike"
-            bikeMark.text = "Trek"
-            bikeCost.text = "170000 rub"
+            bikeLabel.text = "Mountain bike"
+            bikeMarkInfoLabel.text = "Trek"
+            costLabel.text = "170000 rub"
             
         default:
             break
         }
-        view.addSubview(logo)
-        view.addSubview(buyingButton)
-        view.addSubview(bikeType)
-        view.addSubview(bikeMark)
-        view.addSubview(bikeCost)
-        view.addSubview(bikeCostLabel)
-        view.addSubview(bikeMarkLabel)
-        view.addSubview(bikeTypeLabel)
-        }
+    }
 }
     
