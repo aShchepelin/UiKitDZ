@@ -149,30 +149,16 @@ class IngridientsViewController: UIViewController {
         pizzaCompasitionViewController.pizzaLabel.text = pizza
         if pizza == "Маргарита" {
             pizzaCompasitionViewController.composition = """
-            Состав:
-            тесто для пиццы
-            соус томатный
-            сыр Моцарелла
-            помидоры
-            базилик зелёный
-            масло оливковое.
-            Каллории: 1000
+Состав:\n
+тесто для пиццы\n соус томатный\n сыр Моцарелла\n помидоры\n базилик зелёный\n масло оливковое\n
+Каллории: 1000
 """
         }
         if pizza == "Пепперони" {
             pizzaCompasitionViewController.composition = """
-            Состав:
-            тесто для пиццы
-            соус томатный
-            сыр Моцарелла
-            помидоры
-            базилик зелёный
-            масло оливковое.
-            колбаса Пепперони
-            перец черный
-            чеснок
-            лук
-            Каллории: 1500
+Состав:\n
+тесто для пиццы\n соус томатный\n сыр Моцарелла\n помидоры \n масло оливковое\n колбаса Пепперони\n перец черный\n
+Каллории: 1500
 """
             }
         pizzaCompasitionViewController.modalPresentationStyle = .formSheet

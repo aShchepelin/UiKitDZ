@@ -25,8 +25,8 @@ class PizzaCompositionViewController: UIViewController {
 """
         label.font = UIFont.systemFont(ofSize: 25)
         label.textColor = .systemGray
-        label.frame = CGRect(x: 0, y: 100, width: 300, height: 400)
-        label.numberOfLines = 15
+        label.frame = CGRect(x: 100, y: 100, width: 300, height: 600)
+        label.numberOfLines = 0
         return label
     }()
     
