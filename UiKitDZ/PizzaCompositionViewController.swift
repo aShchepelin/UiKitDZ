@@ -5,7 +5,6 @@
 //  Created by Александр Андреевич Щепелин on 29.09.2022.
 //
 
-import Foundation
 import UIKit
 /// Экран с информацией о составе пиццы и колориями
 class PizzaCompositionViewController: UIViewController {
