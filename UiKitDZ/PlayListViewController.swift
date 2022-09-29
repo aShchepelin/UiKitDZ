@@ -12,11 +12,8 @@ class PlayListViewController: UIViewController {
     var counter = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
-      setupUI()
     }
     
-    func setupUI() {
-    }
     @IBAction func dunaAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondVC = storyboard.instantiateViewController(

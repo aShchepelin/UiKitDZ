@@ -9,19 +9,12 @@ import UIKit
 // Воспроизведение выбранной песни с рабочим слайдером и временем
 class PlayerViewController: UIViewController {
  
-    
     @IBOutlet weak var artistLabel: UILabel!
-    
     @IBOutlet weak var songLabel: UILabel!
-    
     @IBOutlet weak var albumImage: UIImageView!
-    
     @IBOutlet weak var playingFromAlbum: UILabel!
-    
     @IBOutlet weak var songSlider: UISlider!
-    
     @IBOutlet weak var currentPlayerValueLabel: UILabel!
-    
     @IBOutlet weak var playerDurationLabel: UILabel!
     
     var song = Song(name: "", artist: "", albumImage: "", song: "")
@@ -59,7 +52,7 @@ class PlayerViewController: UIViewController {
         
     }
     
-    @IBAction func dismissAction(_ sender: Any) {
+    @IBAction func closeAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
@@ -71,7 +64,7 @@ class PlayerViewController: UIViewController {
                 sender.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
                 player.play()
             }
-            self.view.layoutIfNeeded()
+            view.layoutIfNeeded()
         }
     
     func configuratePlayerDurationLabel() {
@@ -87,6 +80,7 @@ class PlayerViewController: UIViewController {
     
 }
 
+/// Расширение для обозначения формата секунд и минут + таймер
 extension PlayerViewController {
     @objc func updateTimer() {
         songSlider.value = Float(player.currentTime)
@@ -99,6 +93,7 @@ extension PlayerViewController {
         }
         currentPlayerValueLabel.text = "\(minutes):\(secondsString)"
     }
+    
     func createTimer() {
         if timer == nil {
             timer = Timer.scheduledTimer(withTimeInterval: 1/5, repeats: true) { [weak self]_ in
