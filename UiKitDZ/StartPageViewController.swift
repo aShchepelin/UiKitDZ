@@ -7,7 +7,7 @@
 
 import UIKit
 /// Экран входа с вводом номера и пароля с рабочим глазиком
-class StartPageViewController: UIViewController {
+final class StartPageViewController: UIViewController {
  
 // MARK: - Visual Components
     

@@ -12,9 +12,9 @@ protocol PopToRootVC: AnyObject {
     func goToRootViewController()
 }
 /// Экран с выбором ингридиентов для пиццы
-class IngridientsViewController: UIViewController {
+final class IngridientsViewController: UIViewController {
     
-// MARK: - Visual Components
+    // MARK: - Visual Components
     
     let pizzaLabel: UILabel = {
         let label = UILabel()
@@ -38,7 +38,7 @@ class IngridientsViewController: UIViewController {
     }()
     
     let cheeseSwitch: UISwitch = {
-       let cheese = UISwitch()
+        let cheese = UISwitch()
         cheese.frame = CGRect(x: 300, y: 500, width: 30, height: 30)
         return cheese
     }()
@@ -52,7 +52,7 @@ class IngridientsViewController: UIViewController {
     }()
     
     let hamSwitch: UISwitch = {
-       let ham = UISwitch()
+        let ham = UISwitch()
         ham.frame = CGRect(x: 300, y: 550, width: 30, height: 30)
         return ham
     }()
@@ -66,7 +66,7 @@ class IngridientsViewController: UIViewController {
     }()
     
     let mashroomSwitch: UISwitch = {
-       let mashroom = UISwitch()
+        let mashroom = UISwitch()
         mashroom.frame = CGRect(x: 300, y: 600, width: 30, height: 30)
         return mashroom
     }()
@@ -80,7 +80,7 @@ class IngridientsViewController: UIViewController {
     }()
     
     let oliveSwitch: UISwitch = {
-       let olive = UISwitch()
+        let olive = UISwitch()
         olive.frame = CGRect(x: 300, y: 650, width: 30, height: 30)
         return olive
     }()
@@ -91,7 +91,7 @@ class IngridientsViewController: UIViewController {
         button.backgroundColor = .systemOrange
         button.layer.cornerRadius = 15
         button.frame = CGRect(x: 70, y: 700, width: 250, height: 50)
-        button.addTarget(self, action: #selector(presentCheckVC), for: .touchUpInside)
+        button.addTarget(self, action: #selector(presentCheckVCAction), for: .touchUpInside)
         return button
     }()
     
@@ -107,19 +107,20 @@ class IngridientsViewController: UIViewController {
         return button
     }()
     
-// MARK: - Public properties
+    // MARK: - Public properties
     
     var pizza = ""
     var pizzaPic = ""
+    var ingridients = ""
     
-// MARK: - Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-// MARK: - Public methods
+    // MARK: - Public methods
     
     func setupUI() {
         view.backgroundColor = .white
@@ -160,36 +161,39 @@ class IngridientsViewController: UIViewController {
 тесто для пиццы\n соус томатный\n сыр Моцарелла\n помидоры \n масло оливковое\n колбаса Пепперони\n перец черный\n
 Каллории: 1500
 """
-            }
+        }
         pizzaCompasitionViewController.modalPresentationStyle = .formSheet
         present(pizzaCompasitionViewController, animated: true)
     }
     
-    @objc func presentCheckVC() {
+    @objc func presentCheckVCAction() {
         let checkViewController = CheckViewController()
         let navigationControllerTwo = UINavigationController(rootViewController: checkViewController)
         checkViewController.pizzaLabel.text = pizza
-        var ingridients = ""
-        if cheeseSwitch.isOn == true {
-            ingridients += "Сыр моцарелла\n"
-        }
-        if hamSwitch.isOn == true {
-            ingridients += "Ветчина\n"
-        }
-        if mashroomSwitch.isOn == true {
-            ingridients += "Грибы\n"
-        }
-        if oliveSwitch.isOn == true {
-            ingridients += "Маслины\n"
-        }
         checkViewController.title = "Оплата"
+        ingridientsAction()
         checkViewController.ingridientsLabel.text = ingridients
         navigationControllerTwo.modalPresentationStyle = .fullScreen
         checkViewController.delegate = self
         present(navigationControllerTwo, animated: true)
     }
+    
+    func ingridientsAction() {
+       if cheeseSwitch.isOn == true {
+           ingridients += "Сыр моцарелла\n"
+       }
+       if hamSwitch.isOn == true {
+           ingridients += "Ветчина\n"
+       }
+       if mashroomSwitch.isOn == true {
+           ingridients += "Грибы\n"
+       }
+       if oliveSwitch.isOn == true {
+           ingridients += "Маслины\n"
+       }
+   }
+    
 }
-
 /// Расширение с для перехода на второй экран
 
 extension IngridientsViewController: PopToRootVC {

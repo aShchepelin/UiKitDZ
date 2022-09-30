@@ -7,7 +7,7 @@
 
 import UIKit
 /// Экран для выдачи чека + обратная связь в аллерте.
-class CheckViewController: UIViewController {
+final class CheckViewController: UIViewController {
     
 // MARK: - Visual Components
     
@@ -61,14 +61,14 @@ class CheckViewController: UIViewController {
         let cardSwitch = UISwitch()
         cardSwitch.isOn = true
         cardSwitch.frame = CGRect(x: 290, y: 600, width: 30, height: 30)
-        cardSwitch.addTarget(self, action: #selector(cardSwitchCheck), for: .valueChanged)
+        cardSwitch.addTarget(self, action: #selector(cardSwitchCheckAction), for: .valueChanged)
         return cardSwitch
     }()
     
     lazy var cashSwitch: UISwitch = {
         let cashSwitch = UISwitch()
         cashSwitch.frame = CGRect(x: 290, y: 650, width: 30, height: 30)
-        cashSwitch.addTarget(self, action: #selector(cashSwitchCheck), for: .valueChanged)
+        cashSwitch.addTarget(self, action: #selector(cashSwitchCheckAction), for: .valueChanged)
         return cashSwitch
     }()
     
@@ -79,7 +79,7 @@ class CheckViewController: UIViewController {
         button.setTitle("\u{F8FF} Pay", for: .normal)
         button.backgroundColor = .black
         button.titleLabel?.textColor = .white
-        button.addTarget(self, action: #selector(orderAlert), for: .touchUpInside)
+        button.addTarget(self, action: #selector(orderAlertAction), for: .touchUpInside)
         return button
     }()
  
@@ -114,7 +114,7 @@ class CheckViewController: UIViewController {
         }
     }
     
-    @objc func orderAlert() {
+    @objc func orderAlertAction() {
         let orderAlert = UIAlertController(title: "Заказ оплачен и будет доставлен в течении 15 минут!",
                                            message: "Приятного аппетита! Оставьте обратную связь о приложении.",
                                            preferredStyle: .alert)
@@ -130,13 +130,13 @@ class CheckViewController: UIViewController {
         present(orderAlert, animated: false)
     }
     
-    @objc func cardSwitchCheck() {
+    @objc func cardSwitchCheckAction() {
         if cardSwitch.isOn {
             cashSwitch.isOn = false
         }
     }
     
-    @objc func cashSwitchCheck() {
+    @objc func cashSwitchCheckAction() {
         if cashSwitch.isOn {
             cardSwitch.isOn = false
         }

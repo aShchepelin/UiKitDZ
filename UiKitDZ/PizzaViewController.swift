@@ -7,7 +7,7 @@
 
 import UIKit
 /// Экран выбора пиццы
-class PizzaViewController: UIViewController {
+final class PizzaViewController: UIViewController {
     
 // MARK: - Visual Components
     

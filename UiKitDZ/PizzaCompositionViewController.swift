@@ -7,7 +7,7 @@
 
 import UIKit
 /// Экран с информацией о составе пиццы и колориями
-class PizzaCompositionViewController: UIViewController {
+final class PizzaCompositionViewController: UIViewController {
     
 // MARK: - Visual Components
     
