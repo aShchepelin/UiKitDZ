@@ -3,10 +3,41 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Секундомер-->
+        <scene sceneID="gWb-Oa-9B9">
+            <objects>
+                <viewController id="9DA-Kh-Evc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6zY-iV-uIW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Pa2-KR-83R"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Секундомер" image="stopwatch" catalog="system" id="3lQ-ik-aay"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtZ-ro-XeO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="339"/>
+        </scene>
+        <!--Мировое время-->
+        <scene sceneID="hhz-3f-qYq">
+            <objects>
+                <viewController id="yle-IJ-ilb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgF-dk-2qT">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="brg-Y8-PlF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Мировое время" image="globe" catalog="system" id="NCM-DQ-T2R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LZ-vH-AdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="-969"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="irL-nV-bDa">
             <objects>
@@ -18,9 +49,9 @@
                         <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qSC-uK-yva" kind="relationship" relationship="viewControllers" id="f1C-hI-OeE"/>
+                        <segue destination="yle-IJ-ilb" kind="relationship" relationship="viewControllers" id="f1C-hI-OeE"/>
                         <segue destination="t9D-jR-RLh" kind="relationship" relationship="viewControllers" id="zte-XF-IJ5"/>
-                        <segue destination="huN-qx-Asn" kind="relationship" relationship="viewControllers" id="ScD-Fs-run"/>
+                        <segue destination="9DA-Kh-Evc" kind="relationship" relationship="viewControllers" id="ScD-Fs-run"/>
                         <segue destination="QIF-CY-u0X" kind="relationship" relationship="viewControllers" id="C3E-NM-nlq"/>
                     </connections>
                 </tabBarController>
@@ -48,28 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1793.8461538461538" y="1007.345971563981"/>
         </scene>
-        <!--WorldTime-->
-        <scene sceneID="tJ4-6a-p15">
-            <objects>
-                <viewControllerPlaceholder storyboardName="WorldTime" id="qSC-uK-yva" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eaN-qo-mww"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ueu-gb-RR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1795" y="-969"/>
-        </scene>
-        <!--StopWatch-->
-        <scene sceneID="no0-uh-e57">
-            <objects>
-                <viewControllerPlaceholder storyboardName="StopWatch" id="huN-qx-Asn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="y3F-m6-M19"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sbq-Yc-trU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1795" y="339"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="globe" catalog="system" width="128" height="123"/>
+        <image name="stopwatch" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
