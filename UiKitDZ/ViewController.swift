@@ -7,7 +7,7 @@
 
 import UIKit
 
-// Стартовый экран приложения
+/// Стартовый экран приложения
 final class ViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -15,7 +15,7 @@ final class ViewController: UIViewController {
     // MARK: - Public properties
     // MARK: - Private properties
     // MARK: - Initializers
-    // MARK: - UIViewController
+    // MARK: - Lifevycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -25,12 +25,9 @@ final class ViewController: UIViewController {
     // MARK: - Private methods
     private func setupUI() {
         view.backgroundColor = .white
-        
-        setUnderlines()
     }
     
-    private func setUnderlines() {
-    }
     // MARK: - Types
     // MARK: - Constants
+    // MARK: - Extension
 }
