@@ -11,13 +11,13 @@ final class TimerViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var timer: UIPickerView!
+    @IBOutlet private weak var timer: UIPickerView!
     
     // MARK: - Public properties
     
-    var hours = 0
-    var minutes = 0
-    var seconds = 0
+   private var hours = 0
+   private var minutes = 0
+   private var seconds = 0
     
     // MARK: - UIViewController
     
@@ -26,14 +26,14 @@ final class TimerViewController: UIViewController {
         setupUI()
     }
     
-    func setupUI() {
+   private func setupUI() {
         timer.delegate = self
         timer.dataSource = self
     }
 }
 
 /// Расширение пикервью для добавления значений
-
+// MARK: - Extensions
 extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -52,7 +52,7 @@ extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return pickerView.frame.size.width/3
+        return pickerView.frame.size.width / 3
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
