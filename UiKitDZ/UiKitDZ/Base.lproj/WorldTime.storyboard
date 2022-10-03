@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yle-IJ-ilb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Мировое время-->
+        <scene sceneID="hhz-3f-qYq">
+            <objects>
+                <viewController id="yle-IJ-ilb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgF-dk-2qT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="brg-Y8-PlF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Мировое время" image="globe" catalog="system" id="NCM-DQ-T2R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LZ-vH-AdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="-969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe" catalog="system" width="128" height="123"/>
+    </resources>
+</document>
