@@ -6,7 +6,7 @@
 //
 
 import UIKit
-/// экран где отображаются новости с возможностью оформить подписку
+/// Экран где отображаются новости с возможностью оформить подписку с сегментами слайдером и свичами
 final class NewsViewController: UIViewController {
     // MARK: - IBOutlets
     
@@ -15,8 +15,8 @@ final class NewsViewController: UIViewController {
     @IBOutlet weak var exmpQuantitySlider: UISlider!
     @IBOutlet weak var exmpQuantityLabel: UILabel!
     
-    // MARK: - Public properties
-    var news = [UIImage(named: "1.png"),
+    // MARK: - Private properties
+    private let news = [UIImage(named: "1.png"),
                 UIImage(named: "2.jpg")]
 
     override func viewDidLoad() {
