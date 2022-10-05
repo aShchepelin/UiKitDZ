@@ -15,7 +15,7 @@ final class ViewController: UIViewController {
     // MARK: - Public properties
     // MARK: - Private properties
     // MARK: - Initializers
-    // MARK: - Lifevycle
+    // MARK: - Lifeсycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
