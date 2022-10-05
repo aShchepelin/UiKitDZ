@@ -18,9 +18,9 @@ final class StopWatchViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet private weak var timerLabel: UILabel!
+    @IBOutlet private weak var startButton: UIButton!
+    @IBOutlet private weak var stopButton: UIButton!
     
     // MARK: - Private properties
     private var timer = Timer()
@@ -33,7 +33,7 @@ final class StopWatchViewController: UIViewController {
         setupUI()
     }
     // MARK: - IBActions
-    @IBAction func startPauseAction(_ sender: Any) {
+    @IBAction private func startPauseAction(_ sender: Any) {
         if !isTimerRunning {
             timer = Timer.scheduledTimer(timeInterval: 1,
                                          target: self,
@@ -48,7 +48,7 @@ final class StopWatchViewController: UIViewController {
             isTimerRunning = false
         }
     }
-    @IBAction func stopButtonAction(_ sender: Any) {
+    @IBAction private func stopButtonAction(_ sender: Any) {
         timer.invalidate()
         isTimerRunning = false
         counter = 0
@@ -64,7 +64,7 @@ final class StopWatchViewController: UIViewController {
         
     }
     
-    @objc func runTimer() {
+    @objc private func runTimer() {
         counter += 1
         let hour = counter / 3600
         let minute = (counter % 3600) / 60
