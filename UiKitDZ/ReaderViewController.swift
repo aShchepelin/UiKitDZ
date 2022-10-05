@@ -32,7 +32,7 @@ final class ReaderViewController: UIViewController {
     
     // MARK: - Visual Components
     
-    private lazy var sliderForFont: UISlider = {
+    private lazy var fontSlider: UISlider = {
         let slider = UISlider()
         slider.frame = CGRect(x: 50, y: 600, width: 200, height: 30)
         slider.minimumValue = 10
@@ -96,7 +96,7 @@ final class ReaderViewController: UIViewController {
         return button
     }()
     
-    private lazy var themeToggle: UISwitch = {
+    private lazy var themeSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.frame = CGRect(x: 320, y: 700, width: 30, height: 30)
         toggle.addTarget(self, action: #selector(darkThemeAction), for: .valueChanged)
@@ -135,7 +135,7 @@ final class ReaderViewController: UIViewController {
         myTextView.text = Constants.textForReader
         myTextView.textColor = .black
         view.addSubview(myTextView)
-        view.addSubview(sliderForFont)
+        view.addSubview(fontSlider)
         view.addSubview(redColorButton)
         view.addSubview(blueColorButton)
         view.addSubview(greenColorButton)
@@ -144,14 +144,14 @@ final class ReaderViewController: UIViewController {
         view.addSubview(largeFontButton)
         fontsPicker.frame = CGRect(x: 20, y: 750, width: 300, height: 50)
         view.addSubview(fontsPicker)
-        view.addSubview(themeToggle)
+        view.addSubview(themeSwitch)
         view.addSubview(toggleLabel)
         myTextView.isSelectable = false
         fontsPicker.setValue(UIColor.gray, forKey: "textColor")
     }
     
     @objc private func sliderValueAction() {
-        myTextView.font = UIFont.systemFont(ofSize: CGFloat(sliderForFont.value))
+        myTextView.font = UIFont.systemFont(ofSize: CGFloat(fontSlider.value))
     }
     
     @objc private func redFontAction() {
@@ -171,11 +171,11 @@ final class ReaderViewController: UIViewController {
     }
     
     @objc private func smallFontAction() {
-        myTextView.font = UIFont(name: myCurrentFont, size: CGFloat(sliderForFont.value))
+        myTextView.font = UIFont(name: myCurrentFont, size: CGFloat(fontSlider.value))
     }
     
     @objc private func largeFontAction() {
-        myTextView.font = UIFont(name: myCurrentFont, size: CGFloat(sliderForFont.value))?.bold
+        myTextView.font = UIFont(name: myCurrentFont, size: CGFloat(fontSlider.value))?.bold
     }
     
     @objc private func darkThemeAction(_ toggle: UISwitch) {
@@ -207,28 +207,8 @@ extension ReaderViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        myTextView.font = UIFont(name: fonts[row], size: CGFloat(sliderForFont.value))
+        myTextView.font = UIFont(name: fonts[row], size: CGFloat(fontSlider.value))
         myTextView.resignFirstResponder()
         myCurrentFont = fonts[row]
-    }
-}
- // MARK: - Exstension UIFont
-extension UIFont {
-    var bold: UIFont { return withWeight(.bold) }
-    var semibold: UIFont { return withWeight(.semibold) }
-
-    private func withWeight(_ weight: UIFont.Weight) -> UIFont {
-        var attributes = fontDescriptor.fontAttributes
-        var traits = (attributes[.traits] as? [UIFontDescriptor.TraitKey: Any]) ?? [:]
-
-        traits[.weight] = weight
-
-        attributes[.name] = nil
-        attributes[.traits] = traits
-        attributes[.family] = familyName
-
-        let descriptor = UIFontDescriptor(fontAttributes: attributes)
-
-        return UIFont(descriptor: descriptor, size: pointSize)
     }
 }
