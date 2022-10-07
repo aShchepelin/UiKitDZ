@@ -11,9 +11,9 @@ import UIKit
 final class StopWatchViewController: UIViewController {
     // MARK: - Enum
     enum Constants {
-        static let startLabel = "Start"
-        static let pauseLabel = "Pause"
-        static let stopButton = "Stop"
+        static let start = "Start"
+        static let pause = "Pause"
+        static let stop = "Stop"
     }
     
     // MARK: - IBOutlets
@@ -26,7 +26,6 @@ final class StopWatchViewController: UIViewController {
     private var timer = Timer()
     private var isTimerRunning = false
     private var counter = 0
-    // MARK: - Initializers
     // MARK: - Lifeсycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,26 +40,27 @@ final class StopWatchViewController: UIViewController {
                                          userInfo: nil,
                                          repeats: true)
             isTimerRunning = true
-            startButton.setTitle(Constants.pauseLabel, for: .normal)
+            startButton.setTitle(Constants.pause, for: .normal)
         } else {
             timer.invalidate()
-            startButton.setTitle(Constants.startLabel, for: .normal)
+            startButton.setTitle(Constants.start, for: .normal)
             isTimerRunning = false
         }
+        
     }
     @IBAction private func stopButtonAction(_ sender: Any) {
         timer.invalidate()
         isTimerRunning = false
         counter = 0
         timerLabel.text = "00:00:00"
-        startButton.setTitle(Constants.startLabel, for: .normal)
+        startButton.setTitle(Constants.start, for: .normal)
     }
     
     // MARK: - Private methods
     private func setupUI() {
         view.backgroundColor = .white
-        startButton.setTitle(Constants.startLabel, for: .normal)
-        stopButton.setTitle(Constants.stopButton, for: .normal)
+        startButton.setTitle(Constants.start, for: .normal)
+        stopButton.setTitle(Constants.stop, for: .normal)
         
     }
     
